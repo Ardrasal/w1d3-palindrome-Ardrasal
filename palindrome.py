@@ -3,6 +3,8 @@ def palindrome(text):
 
     if len(text) <= 1:
         return True
+    # if len(text) > 1:
+    #     return Falsey
       
 def clean_text(words):
     """"This function will clean up the text by removing white space, converting to lowercase, and only selecting alphabetic characters."""
@@ -11,12 +13,13 @@ def clean_text(words):
     for char in words:
         if char.isalpha():
             new_words = new_words + char
+    # print(new_words)
     return new_words
 
 def inner(alpha):
     """start with full phrase and then reduce each side by 1 letter"""
     # clean_text = clean_text (trying to figure out how to store but this didn't work)
-    print(alpha)
+    # print(alpha)
     if len(alpha) > 1:
         inner(alpha [1:-1])
         # need to compare first and last letters
@@ -29,12 +32,13 @@ def inner(alpha):
 
 test_case = input("Test your word or phrase here to find out if it's a palindrome: ")
 
-# doesn't seem like palindrome function is needed.
+palindrome(test_case)
+# # is palindrome function needed?
 test_case = clean_text(test_case)
-inner(test_case)
-# print(clean_test_case(test_case))
-# Compare first and last letters and work in.
-# make sure that it's called in the proper order
+new_words = inner(new_words)
+# # print(clean_test_case(test_case))
+# # Compare first and last letters and work in.
+# # make sure that it's called in the proper order
 
 if True:
     print("is a palindrome")
